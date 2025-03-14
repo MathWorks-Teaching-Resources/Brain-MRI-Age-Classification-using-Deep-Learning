@@ -17,14 +17,7 @@ arguments
 end
 
 % Create classification image set folders
-if ~isempty(dstPath)
-    i = 1;
-    t = dstPath;
-    while exist(t,'dir')
-        t = dstPath+"_"+i;
-        i = i+1;
-    end
-    dstPath = i;
+if ~isempty(dstPath)   
     assert(~exist(dstPath,'dir'));
     mkdir(dstPath);
 end
